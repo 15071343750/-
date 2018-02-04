@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>后台系统-主页</title>
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/nprogress/nprogress.css" />
+		<link rel="stylesheet" href="css/admin.css" />
+	</head>
+
+	<body>
+		<!--侧边栏-->
+		<aside class="ad_aside">
+			<div class="brand"><a href="index.html">ITCAST</a></div>
+			<div class="user">
+				<img src="images/default.png" alt="" />
+				<span>Super manage</span>
+			</div>
+			<div class="menu">
+				<ul>
+		            <li><a href="userManage.html"><span class="glyphicon glyphicon-user"></span> 用户管理</a></li>
+		            <li>
+		                <a href="javascript:;" class="category"><span class="glyphicon glyphicon-list"></span> 分类管理</a>
+		                <div class="child" style="display: none;">
+		                    <a href="categoryFirst.html">一级分类</a>
+		                    <a href="categorySecond.html">二级分类</a>
+		                </div>
+		            </li>
+		            <li><a href="productManage.html"><span class="glyphicon glyphicon-tags"></span> 商品管理</a></li>
+		        </ul>
+			</div>
+		</aside>
+		<!--内容-->
+		<section class="ad_section">
+			<nav class="ad_nav">
+				<!--data-menu 标识符-->
+				<a data-menu href="javascript:;" class="pull-left"><span class="glyphicon glyphicon-align-justify"></span></a>
+        		<a data-logout href="javascript:;" class="pull-right"><span class="glyphicon glyphicon-log-out"></span></a>
+			</nav>
+			<div class="container-fluid">
+				<ol class="breadcrumb">
+					<li><a href="#">管理系统</a></li>
+					<li class="active">首页</li>
+				</ol>
+				<div class="ad_content">
+		            <div class="picTable"></div>
+		            <div class="picTable"></div>
+		        </div>
+			</div>
+		</section>
+	</body>
+	
+	<script src="assets/jquery/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/echarts/echarts.min.js"></script>
+	<script src="assets/nprogress/nprogress.js"></script>
+	<script src="js/admin.js"></script>
+	<script src="js/index.js"></script>
+</html>

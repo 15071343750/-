@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="image/x-icon" rel="shortcut icon" href="../images/favicon.ico" />
+    <title>登录</title>
+    <link rel="stylesheet" href="../assets/mui/css/mui.css">
+    <link rel="stylesheet" href="../assets/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/user/login.css">
+</head>
+<body>
+    <div class="lt_container">   
+        <header class="lt_topBar">
+            <a class="btn-left" href="javascript:history.back();"><span class="mui-icon mui-icon-back"></span></a>
+            <h3>登录</h3>
+        </header>
+
+        <div class="lt_content">
+            <div class="lt_wrapper">
+                <form class="mui-input-group">
+                    <div class="mui-input-row">
+                        <label>用户名</label>
+                        <input type="text" class="mui-input-clear" name="username" placeholder="请输入用户名">
+                    </div>
+                    <div class="mui-input-row">
+                        <label>密码</label>
+                        <input type="password" class="mui-input-password" name="password" placeholder="请输入密码">
+                        <span class="mui-icon mui-icon-eye"></span>
+                    </div>
+                    <div class="mui-button-row">
+                        <button type="button" class="mui-btn mui-btn-primary" >确认</button>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="reset" class="mui-btn mui-btn-danger" >重置</button>
+                    </div>
+                </form>
+                <div class="mui-text-right">
+                    <a href="#" class="mui-btn mui-btn-link">免费注册</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="lt_tabBar">
+            <ul class="mui-clearfix">
+                <li><a href="../index.html"><span class="fa fa-home"></span><p>首页</p></a></li>
+                <li><a href="../category.html"><span class="fa fa-bars"></span><p>分类</p></a></li>
+                <li><a href="cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a></li>
+                <li><a href="index.html"><span class="fa fa-user"></span><p>会员中心</p></a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="../assets/mui/js/mui.min.js"></script>
+    <script src="../assets/zepto/zepto.min.js"></script>
+    <script src="../assets/artTemplate/template-native.js"></script>
+    <script src="../js/user/login.js"></script>
+</body>
+</html>

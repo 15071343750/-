@@ -1,0 +1,27 @@
+项目搭建开发环境
+
+
+1. 把letao文件夹放到你们的服务器的目录下，要保证没有任何中文目录
+
+2. 进入到当前letao文件目录，按住shift不放点击鼠标右键，找到在此处打开命令窗口点击
+
+3. 执行命令npm i（执行后会帮助我们下载所需的依赖）
+
+4. 安装SQLyog
+
+5. 找到课程资料的sqlyog目录进入
+
+6. 根据自己的操作系统选择目录进入->双击.exe尾缀文件启动安装...
+
+7. 使用sqlyog目录下的安装必看.txt文件注册
+
+8. 连接
+   
+
+9. 找到letao/docs/letao初始化.sql文件中->在编辑器中打开->ctrl+a ->ctrl+c->在sqlyog右侧查询窗口ctrl+v粘贴 -> 然后选中全部sql语句 ->点击左侧按钮执行
+
+10. 连接数据库到项目 找到\models目录下的db.js打开核对用户名和密码等信息，一般情况下没有问题
+
+11. 启动项目--》找到letao-master项目根目录shift+鼠标右键打开cmd--》输入npm start回车
+
+12. http://localhost:3000/mobile/和http://localhost:3000/manage/login.html

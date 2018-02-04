@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>商品列表</title>
+		<link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="assets/mui/css/mui.css" />
+		<link rel="stylesheet" href="assets/fa/css/font-awesome.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/searchList.css" />
+	</head>
+	<body>
+		<div class="lt_container">
+		
+			<header class="lt_topBar">
+				<a class="btn-left" href="javascript:history.back();"><span class="mui-icon mui-icon-back"></span></a>
+				<h3>商品列表</h3>
+			</header>
+			
+			<div class="lt_content">
+				<div class="lt_wrapper">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<!--搜索表单-->
+							<div class="lt_search">
+								<form action="">
+									<input type="text" placeholder="请输入搜索关键字" class="search_input" />
+									<a href="#" class="search_btn">搜索</a>
+								</form>
+							</div>
+							<!--orderBar-->
+							<div class="lt_orderBar mui-clearfix">
+								<a href="javascript:;">上架时间 <span class="fa fa-angle-down"></span></a>
+								<a href="javascript:;" data-type = "price">价格 <span class="fa fa-angle-down"></span></a>
+								<a href="javascript:;" data-type = "num">库存 <span class="fa fa-angle-down"></span></a>
+								<a href="javascript:;">折扣 <span class="fa fa-angle-down"></span></a>
+							</div>
+							<!--搜索商品列表-->
+							<div class="lt_product">
+		                    	<div class="loading"><span class="mui-spinner"></span></div>
+		                        <!--<a href="#" class="item">
+									<img src="images/product.jpg" alt="" />
+									<span class="mui-ellipsis-2 mui-text-left">adidas阿迪达斯 男式 场下休闲篮球鞋S83700 </span>
+									<p><span>&yen;360.00</span> <span>&yen;560.00</span></p>
+									<button class="mui-btn-blue">立即购买</button>
+								</a>-->
+		                    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<footer class="lt_tabBar">
+				<ul>
+					<li><a href="index.html"><span class="fa fa-home"></span><p>首页</p></a></li>
+					<li><a href="category.html"><span class="fa fa-bars"></span><p>分类</p></a></li>
+	                <li><a href="user/cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a></li>
+	                <li><a href="user/index.html"><span class="fa fa-user"></span><p>会员中心</p></a></li>
+				</ul>
+			</footer>
+			
+		</div>
+	</body>
+	<script type="text/template" id="templateList">
+		<% for (var i = 0; i < data.length; i++) { %>
+			<% var info = data[i]; %>
+			<a href="product.html?productId=<%=data[i].id%>" class="item">
+				<!--判断是否有图片-->
+				<%
+					var picArr = info.pic;
+					var imgSrc = '';
+					if (picArr.length) {
+						imgSrc = picArr[0].picAddr;
+					}
+				%>
+				<img src="<%=imgSrc%>" onerror="this.src='images/none.jpg'" alt="" />
+				<span class="mui-ellipsis-2 mui-text-left"><%=info.proName%></span>
+				<p><span>&yen;<%=info.price%></span> <span>&yen;<%=info.oldPrice%></span></p>
+				<button class="mui-btn-blue">立即购买</button>
+			</a>			
+		<% } %>
+	</script>
+	<script src="assets/mui/js/mui.min.js"></script>
+	<script src="assets/zepto/zepto.min.js"></script>
+	<script src="assets/artTemplate/template-native.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/searchList.js"></script>
+</html>

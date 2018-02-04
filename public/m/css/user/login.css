@@ -1,0 +1,10 @@
+.mui-input-row {
+  font-size: 14px;
+}
+.mui-input-row > label {
+  width: 30%;
+}
+.mui-input-row > input {
+  width: 70%;
+  font-size: 14px;
+}

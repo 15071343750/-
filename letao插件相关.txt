@@ -1,0 +1,6 @@
+用到的插件
+	分页插件 bootstrapPaginator 基于bootstrap	
+	表单验证插件 bootstrapValidator 基于bootstrap
+	jQuery文件上传插件
+	artTemplate渲染引擎
+	nprogress前端进度条插件(不基于jQuery)

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>后台系统-一级分类</title>
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/bootstrap-validator/css/bootstrapValidator.min.css" />
+		<link rel="stylesheet" href="assets/nprogress/nprogress.css" />
+		<link rel="stylesheet" href="css/admin.css" />
+	</head>
+
+	<body>
+		<!--侧边栏-->
+		<aside class="ad_aside">
+			<div class="brand">
+				<a href="index.html">ITCAST</a>
+			</div>
+			<div class="user">
+				<img src="images/default.png" alt="" />
+				<span>Super manage</span>
+			</div>
+			<div class="menu">
+				<ul>
+					<li>
+						<a href="userManage.html"><span class="glyphicon glyphicon-user"></span> 用户管理</a>
+					</li>
+					<li class="now">
+						<a href="javascript:;" class="category"><span class="glyphicon glyphicon-list"></span> 分类管理</a>
+						<div class="child">
+							<a class="now" href="categoryFirst.html">一级分类</a>
+							<a href="categorySecond.html">二级分类</a>
+						</div>
+					</li>
+					<li>
+						<a href="productManage.html"><span class="glyphicon glyphicon-tags"></span> 商品管理</a>
+					</li>
+				</ul>
+			</div>
+		</aside>
+		<!--内容-->
+		<section class="ad_section">
+			<nav class="ad_nav">
+				<!--data-menu 标识符-->
+				<a data-menu href="javascript:;" class="pull-left"><span class="glyphicon glyphicon-align-justify"></span></a>
+				<a data-logout href="javascript:;" class="pull-right"><span class="glyphicon glyphicon-log-out"></span></a>
+			</nav>
+			<div class="container-fluid">
+				<ol class="breadcrumb">
+					<li>
+						<a href="#">管理系统</a>
+					</li>
+					<li>
+						<a href="#">分类管理</a>
+					</li>
+					<li class="active">一级分类</li>
+				</ol>
+				<div class="ad_content">
+					<button id="addBtn" class="btn btn-primary mb_15" data-toggle="modal" data-target=".addBtn">添加分类</button>
+					<div class="modal fade addBtn" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="addBtnModal">
+						<div class="modal-dialog modal-sm">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title text-center" id="myModalLabel">添加分类</h4>
+								</div>
+								<div class="modal-body">
+									<form action="#" id="form">
+										<div class="form-group">
+											<input type="text" name="categoryName" class="form-control" id="categoryName" placeholder="请输入分类名称">
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+									<button form="form" type="submit" class="btn btn-success">确认</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<table class="table table-bordered table-hover">
+						<thead>
+							<tr>
+								<th width="20%">序号</th>
+								<th width="80%">分类名称</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+					<div class="page pull-right">
+						<ul class="pagination">
+							<!---->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+	<script type="text/template" id="firstList">
+		<% for (var i = 0; i < rows.length; i++) { %>
+		<tr>
+			<td>
+				<%=(page - 1) * size + i + 1%>
+			</td>
+			<td>
+				<%=rows[i].categoryName%>
+			</td>
+		</tr>
+		<% } %>
+	</script>
+	<script src="assets/jquery/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/nprogress/nprogress.js"></script>
+	<script src="assets/artTemplate/template-native.js"></script>
+	<script src="assets/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+	<script src="assets/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+	<script src="js/admin.js"></script>
+	<script src="js/categoryFirst.js"></script>
+
+</html>

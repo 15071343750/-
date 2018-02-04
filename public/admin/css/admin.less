@@ -1,0 +1,138 @@
+a:hover,
+a:active,
+a:visited,
+a:focus {
+    text-decoration: none;
+}
+// login start
+.login_bgc {
+    background-color: #222d32;
+}
+.mt_150 {
+    margin-top: 150px;
+}
+.panel {
+    box-shadow: 0 0 10px #CCC;
+}
+.mb_15 {
+    margin-bottom: 15px;    
+}
+// login end
+
+// aside
+.ad_aside {
+    position: fixed;
+    width: 180px;
+    height: 100%;
+    background: #222d32;
+    > .brand {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        background: #367fa9;
+        > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 50px;
+            color: #fff;
+            font-weight: blod;
+            font-size: 20px;
+        }
+    }
+    > .user {
+        width: 100%;
+        position: relative;
+        height: 166px;
+        > img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 40px;
+        }
+        > span {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 12px;
+            top: 130px;
+        }
+    }
+    > .menu {
+        > ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            > li {
+                > a {
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                    color: #aaa;
+                    padding-left: 30px;
+                    border: 3px solid transparent;
+                }
+                &.now > a {
+                    color: #fff;
+                    border-left-color: #3c8dbc;
+                    background: #1d1f21;
+                }
+                > .child {
+                    > a {
+                        display: block;
+                        height: 30px;
+                        line-height: 30px;
+                        padding-left: 50px;
+                        font-size: 12px;
+                        color: #aaa;
+                        &.now {
+                            color: #fff;
+                        }
+                    }                   
+                }
+            }
+        }
+    }
+}
+// aside end
+
+.ad_section {
+    padding-left: 180px;
+    transition: all 0.4s;
+    &.menu {
+        padding-left: 0;
+    }
+    > .ad_nav {
+        height: 50px;
+        background: #3c8dbc;
+        margin-bottom: 20px;
+        > a {
+            display: block;
+            height: 100%;
+            font-size: 20px;
+            color: #fff;
+            padding: 14px;
+        }
+    }
+    .ad_content {
+        margin-top: 20px;
+        > .picTable {
+            width: 43%;
+            float: left;
+            height: 400px;
+            &:first-child {
+                margin-left: 2%;
+                margin-right: 10%;
+            }
+        }
+        th, 
+        td {
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+}

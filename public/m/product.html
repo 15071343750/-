@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>商品详情页</title>
+		<link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="assets/mui/css/mui.css" />
+		<link rel="stylesheet" href="assets/fa/css/font-awesome.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/product.css" />
+	</head>
+	<body>
+		<div class="lt_container">
+		
+			<header class="lt_topBar">
+				<a class="btn-left" href="javascript:history.back();"><span class="mui-icon mui-icon-back"></span></a>
+				<a class="btn-right reload" href="javascript:;"><span class="mui-icon mui-icon-reload"></span></a>
+				<h3>商品详情</h3>
+			</header>
+			
+			<div class="lt_content">
+				<div class="lt_wrapper">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll" id="productBox">
+							<!--商品内容-->
+							<div class="loading"><span class="mui-spinner"></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--低部操作-->
+			<div class="lt_trade">
+				<a href="user/cart.html" class="mui-btn mui-btn-link">购物车</a>
+				<div class="mui-pull-right">
+					<a href="#" class="mui-btn mui-btn-danger">加入购物车</a>
+					<a href="#" class="mui-btn mui-btn-warning">立即购买</a>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script type="text/template" id="templateProduct">
+		<!--轮播图-->
+		<div class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop">
+				<% if (!pic || pic.length == 0) { 
+					<!-- 如果pic属性没有图片，就添加一张默认的图片 -->
+					pic = [{'picAddr': 'images/none.jpg'}];
+				} %>
+				<% for (var i = 0; i < pic.length; i++) { %>
+					<!--额外增加的最后一张图片-->
+					<% if (i == 0) { %>
+					<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="<%=pic[pic.length - 1].picAddr%>" /></a></div>
+					<% } %>
+				<div class="mui-slider-item"><a href="#"><img src="<%=pic[i].picAddr%>" /></a></div>
+					<!--额外增加的第一张图片-->
+					<% if (i == pic.length - 1) { %>
+					<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="<%=pic[0].picAddr%>" /></a></div>
+					<% } %>
+				<% } %>
+			</div>
+			<!--小圆点-->
+			<div class="mui-slider-indicator">
+				<% for (var i = 0; i < pic.length; i++) { %>
+				<div class="mui-indicator <%= i == 0 ? 'mui-active' : ''%>"></div>
+                <% } %>
+            </div>
+		</div>	<!--轮播图闭合div-->
+		<!--名称-->
+		<div class="lt_item">
+			<span class="mui-ellipsis-2"><%=proName%></span>
+		</div>
+		<!--价格-->
+		<div class="lt_item">
+			价格：<span class="nowPrice">&yen;<%=price%></span> <del class="oldPrice">&yen;<%=oldPrice%></del>
+		</div>
+		<!--尺码-->
+		<div class="lt_item">
+			尺码：
+			<%
+				var numArr = size.split('-');
+				var num1 = numArr[0];
+				var num2 = numArr[1];
+			%>
+			<% for (var i = num1; i <= num2; i++) { %>
+			<span class="size"><%=i%></span>
+			<% } %>
+		</div>
+		<!--数量-->
+		<div class="lt_item">
+			数量：
+			<div class="mui-numbox" data-numbox-min='1' data-numbox-max='<%=num%>'>
+				<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+				<input class="mui-numbox-input" type="number" value="1" />
+				<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+			</div>
+			<span class="residualNum">剩余：<%=num%> 双</span>
+		</div>
+		<!--详情-->
+		<div class="lt_item">
+			详情：<%=proDesc%>
+		</div>
+	</script>
+	<script src="assets/mui/js/mui.min.js"></script>
+	<script src="assets/zepto/zepto.min.js"></script>
+	<script src="assets/artTemplate/template-native.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/product.js"></script>
+</html>

@@ -1,0 +1,67 @@
+.lt_search {
+  overflow: hidden;
+}
+.lt_search > form {
+  position: relative;
+  margin: 10px;
+  padding: 0;
+}
+.lt_search > form > .search_input {
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  font-size: 12px;
+  border: 1px solid #069;
+  color: #666;
+}
+.lt_search > form > .search_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  background-color: #069;
+  font-size: 12px;
+  line-height: 30px;
+  width: 60px;
+  text-align: center;
+  border-radius: 0 6px 6px 0;
+}
+.lt_history > div {
+  margin: 0 10px;
+}
+.lt_history > div span {
+  font-size: 12px;
+  line-height: 21px;
+  color: #666;
+}
+.lt_history > div span:before {
+  font-size: 14px;
+  vertical-align: top;
+  padding-right: 3px;
+}
+.lt_history > ul {
+  padding: 0;
+  list-style: none;
+  margin: 10px 10px 0 10px;
+  border-bottom: 1px dashed #ccc;
+}
+.lt_history > ul > li {
+  height: 30px;
+  line-height: 30px;
+  border: 1px dashed #ccc;
+  border-bottom: none;
+  font-size: 12px;
+}
+.lt_history > ul > li > a {
+  width: 200px;
+  display: inline-block;
+  padding-left: 10px;
+}
+.lt_history > ul > li > span {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
